@@ -1,3 +1,16 @@
 .card-img-top {
-    height: 250px;
+  height: 250px;
+}
+
+@media (max-width: 575px) {
+
+  #colNoImage,
+  #colImage {
+    flex: 0 0 108px;
   }
+
+  .rowNoImage,
+  .rowImage {
+    flex: 0 0 126px;
+  }
+}
