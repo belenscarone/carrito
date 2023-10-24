@@ -6,21 +6,25 @@ const total = document.getElementById('total')
 document.getElementById("btnCaja").addEventListener("click", () => {
   const RUT = document.getElementById("RUT");
   const name = document.getElementById("name");
-  if (RUT.value !== "")
-    if (name.value !== "")
+  if (RUT.value !== "") {
+    if (name.value !== "") {
       alert("Compra realizada con éxito por " + name.value + " - " + RUT.value);
-    else
+    } else {
       alert("Compra realizada con éxito por " + RUT.value);
-  else if (name !== "")
-    alert(`Compra realizada con éxito por ${name.value} (CONSUMIDOR FINAL)`);
-  else
-    alert("Compra realizada con éxito por CONSUMIDOR FINAL");
+    }
+  } else {
+    if (name.value !== "") {
+      alert(`Compra realizada con éxito por ${name.value} (CONSUMIDOR FINAL)`);
+    } else {
+      alert("Compra realizada con éxito por CONSUMIDOR FINAL");
+    }
+  }
 
-    name.value = '';
-    RUT.value = '';
-    cart = [];
-    cartContent.innerHTML = '';
-    total.textContent = 0;
+  name.value = '';
+  RUT.value = '';
+  cart = [];
+  cartContent.innerHTML = '';
+  total.textContent = 0;
 });
 
 function displayCosts() {
